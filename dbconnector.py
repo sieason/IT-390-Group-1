@@ -15,8 +15,3 @@ class dbResult:
 
     def getRow(self, rowNum):
         return self.getAllRows()[rowNum]
-
-r = dbResult()
-
-for i in range(0, r.getLength()):
-    print(r.getRow(i))
