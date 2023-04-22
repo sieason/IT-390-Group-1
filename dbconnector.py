@@ -2,7 +2,7 @@ import sqlite3
 class dbResult:
     def __init__(self):
         self.con = sqlite3.connect("Team_1_Project.db")
-        self.cursor = con.cursor()
+        self.cursor = self.con.cursor()
 
     def __del__(self):
         self.con.close()
