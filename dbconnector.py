@@ -7,8 +7,16 @@ class dbResult:
     def __del__(self):
         self.con.close()
 
-    def getRow(self):
+    def getAllRows(self):
         return self.cursor.execute("SELECT * FROM Graphics_Cards1").fetchall()
 
+    def getLength(self):
+        return len(self.getAllRows())
+
+    def getRow(self, rowNum):
+        return self.getAllRows()[rowNum]
+
 r = dbResult()
-print(r.getRow())
+
+for i in range(0, r.getLength()):
+    print(r.getRow(i))
