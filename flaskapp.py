@@ -1,4 +1,8 @@
 from flask import Flask, render_template
+from dbconnector import dbResult # import database connector class from dbconnector.py
+
+results = dbResult() # instantiate object
+
 app = Flask(__name__)
 
 @app.route('/')
